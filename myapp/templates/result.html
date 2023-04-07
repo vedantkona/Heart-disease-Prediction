@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .healthy {
+            color: green;
+        }
+
+        .disease {
+            color: red;
+        }
+    </style>
+</head>
+
+<body> {% block content %} <h1>Heart Disease Prediction Result</h1> {% if prediction == 0 %} <p class="healthy">The
+        patient is predicted to be healthy</p> {% else %} <p class="disease">The patient is predicted to have heart
+        disease</p> {% endif %} {% endblock %} </body>
+
+</html>
